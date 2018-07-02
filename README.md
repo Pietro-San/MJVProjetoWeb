@@ -85,11 +85,16 @@ Isso tende a acontecer caso seu Eclipse não possui os plugins para trabalhar fo
 
 Segue como executar o aplicativo:
 
-  Após rodar a janela "Principal.html" através do servidor Tomcat, será possível inserir alguma informação nas caixas de texto "Usuário", "Título" e "Corpo do Texto".
+  Após rodar a janela "Principal.html" através do servidor Tomcat, será possível inserir alguma informação nas caixas de texto "Usuário", "Título" e "Corpo do Texto", basta clicar em "Enviar".
+  Atenção: Somente as informações em "Usuário" serão registradas.
+  Apesar de eu já ter criado os métodos para a exibição das tabelas (Método "Listar"), eu não tive tempo de aplicá-los na prática, então, será necessário se logar no banco de dados e digitar "SELECT * FROM USERS;" para ver os resultados.
+  
+### Funcionamento do Aplicativo
+  
   Ao clicar em "Enviar", o "Servlet" que está no package "br.com.mjv.servlet" dentro de "Java Resources" irá passar essa requisição para "Inserir.jsp" que está em "WEB-INF", que por sua fez passa as informações para o "UsuarioDao.java", onde a inserção no bando de dados é executada.
   Tecnicamente, as informações de titulo e corpo deveriam ser passadas para "ConteudoDao.java", porém, foi justamente nesse ponto que tive dificuldades.
    De qualquer modo, o "Insert" na tabela "user" ocorre como esperado e a mensagem "Cadastro de Usuário efetuado com sucesso." é exibida através do "inserir.jsp" pelo "UsuarioDao.java".
-   Apesar de eu já ter criado os métodos para a exibição das tabelas (Método "Listar"), eu não tive tempo de aplicá-los na prática, então, será necessário se logar no banco de dados e digitar "SELECT * FROM USERS;" para ver os resultados.
+   
 
 ## Tecnologias utilizadas
 
